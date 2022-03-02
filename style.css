@@ -30,6 +30,7 @@ body {
 }
 
 .input-box .tweet-area {
+    position: relative;
     min-height: 130px;
 }
 
@@ -39,4 +40,24 @@ body {
     font-size: 22px;
     color: #98a5b1;
     pointer-events: none;
+}
+
+.tweet-area .input {
+    outline: none;
+    font-size: 17px;
+    word-wrap: break-word;
+}
+
+.tweet-area .readonly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.input-box .privacy {
+    color: #1da1f2;
+    margin: 15px 0;
+    display: inline-flex;
+    align-items: center;
 }
