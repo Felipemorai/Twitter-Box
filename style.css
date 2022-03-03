@@ -55,6 +55,10 @@ body {
     z-index: -1;
 }
 
+.readonly .highlight {
+    background: #fd9bb0;
+}
+
 .input-box .privacy {
     color: #1da1f2;
     margin: 15px 0;

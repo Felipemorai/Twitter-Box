@@ -8,6 +8,7 @@ editableInput.onkeyup = (e) => {
     let element = e.target; 
     let maxLength = 100;
     let currentLength = element.innerText.length;
+    let textTag = element.innerHTML;
 
     if(currentLength <= 0) {
         placeholder.style.display = "block";
@@ -21,7 +22,16 @@ editableInput.onkeyup = (e) => {
     counter.innerText = maxLength - currentLength;
 
     if(currentLength > maxLength) {
-
+        let overText = element.innerText.substr(maxLength);
+        overText = `<span class="highlight">${overText}</span>`;
+        textTag = element.innerText.substr(0, maxLength) + overText;
+        readonlyInput.style.zIndex = "1";
+        counter.style.color = "#e0245e";
+        button.classList.remove("active");
+    } else {
+        readonlyInput.style.zIndex = "-1";
+        counter.style.color = "#333";
     }
+    readonlyInput.innerHTML = textTag;
 
 }
