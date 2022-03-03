@@ -66,7 +66,7 @@ body {
     transition: background 0.2s ease;
 }
 
-.input-box .privacy:hover {
+.input-box .privacy:hover, .icons li:hover {
     background: #e7f5fe;
 }
 
@@ -98,10 +98,39 @@ body {
     width: 38px;
     margin: 0 2px;
     font-size: 20px;
-    background: #e7f5fe;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     border-radius: 50%;
+}
+
+.bottom .content {
+    display: flex;
+    align-items: center;
+}
+
+.content .counter {
+    display: none;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #aab8c2;
+    color: #333;
+}
+
+.content button {
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #1da1f2;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.content button:hover {
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.20);
 }
