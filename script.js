@@ -5,7 +5,17 @@ counter = document.querySelector(".counter"),
 button = document.querySelector("button");
 
 editableInput.onkeyup = (e) => {
-    let element = e.target; 
+    let element = e.target;
+    checkInput(element);
+}
+
+editableInput.onkeypress = (e) => {
+    let element = e.target;
+    checkInput(element);
+    placeholder.style.display = "none";
+}
+
+function checkInput(element) {
     let maxLength = 100;
     let currentLength = element.innerText.length;
     let textTag = element.innerHTML;
@@ -33,5 +43,4 @@ editableInput.onkeyup = (e) => {
         counter.style.color = "#333";
     }
     readonlyInput.innerHTML = textTag;
-
 }
